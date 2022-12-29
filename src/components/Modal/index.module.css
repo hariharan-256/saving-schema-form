@@ -1,0 +1,45 @@
+/* backdrop styles */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.backdrop.Show{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* modal styles */
+.Modal {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    min-width: 550px;
+    transform: translateX(100%);
+    width: auto;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 101;
+    transition: all 0.5s ease;
+    height: 100vh;
+    
+}
+.Modal.Show{
+    right: 0;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+}
+
+@media (min-width: 768px) {
+    .modal {
+        width: 40rem;
+        left: calc(50% - 20rem);
+    }
+}
